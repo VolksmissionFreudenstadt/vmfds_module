@@ -5,7 +5,7 @@ if (!defined('TYPO3_MODE')) {
 
 if (TYPO3_MODE === 'BE') {
     
-	/*
+	
     $modulName = 'VolksmissionModule';
  
     //Legt die Position des Moduls fest, hier nach Modul "web"
@@ -21,12 +21,9 @@ if (TYPO3_MODE === 'BE') {
         }
         $TBE_MODULES = $temp_TBE_MODULES;
     }
-    // Hauptmodul erstellen
-    t3lib_extMgm::addModule($modulName, '', '', t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/BackendModul/');
-	*/
 	
-	Tx_Extbase_Utility_Extension::registerModule(
-			$_EXTKEY,
+	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
+			'VMFDS.'.$_EXTKEY,
 			'VolksmissionModule',   //Hier muss der Name aus Zeile 3 eingesetzt werden!
 			'', //
 			'',     // Position
@@ -43,10 +40,10 @@ if (TYPO3_MODE === 'BE') {
 	
  
     /**
-     * Registers a Backend Modul
+     * Registers a BE submodule
      */
-    Tx_Extbase_Utility_Extension::registerModule(
-        $_EXTKEY,
+    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
+        'VMFDS.'.$_EXTKEY,
         'VolksmissionModule',   //Hier muss der Name aus Zeile 3 eingesetzt werden!
         'Kool', //
         '',     // Position
