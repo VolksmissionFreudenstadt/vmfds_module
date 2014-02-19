@@ -4,7 +4,8 @@ if (!defined('TYPO3_MODE')) {
 }
 
 if (TYPO3_MODE === 'BE') {
-     
+    
+	/*
     $modulName = 'VolksmissionModule';
  
     //Legt die Position des Moduls fest, hier nach Modul "web"
@@ -22,6 +23,24 @@ if (TYPO3_MODE === 'BE') {
     }
     // Hauptmodul erstellen
     t3lib_extMgm::addModule($modulName, '', '', t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/BackendModul/');
+	*/
+	
+	Tx_Extbase_Utility_Extension::registerModule(
+			$_EXTKEY,
+			'VolksmissionModule',   //Hier muss der Name aus Zeile 3 eingesetzt werden!
+			'', //
+			'',     // Position
+			array(
+					'Backend' => 'index',
+			),
+			array(
+					'access' => 'user,group',
+					'icon'   => 'EXT:' . $_EXTKEY . '/ext_icon.gif',
+					'labels' => 'LLL:EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_mod_main.xml',
+			)
+	);
+	
+	
  
     /**
      * Registers a Backend Modul
@@ -29,7 +48,7 @@ if (TYPO3_MODE === 'BE') {
     Tx_Extbase_Utility_Extension::registerModule(
         $_EXTKEY,
         'VolksmissionModule',   //Hier muss der Name aus Zeile 3 eingesetzt werden!
-        'kOOL', //
+        'Kool', //
         '',     // Position
         array(
         	'Backend' => 'index', 
@@ -37,7 +56,7 @@ if (TYPO3_MODE === 'BE') {
         array(
             'access' => 'user,group',
             'icon'   => 'EXT:' . $_EXTKEY . '/ext_icon.gif',
-            'labels' => 'LLL:EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_kategory.xml',
+            'labels' => 'LLL:EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_mod_kool.xml',
         )
     );
 }
