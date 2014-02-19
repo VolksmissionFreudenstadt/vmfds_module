@@ -29,9 +29,10 @@ if (TYPO3_MODE === 'BE') {
     Tx_Extbase_Utility_Extension::registerModule(
         $_EXTKEY,
         'VolksmissionModule',   //Hier muss der Name aus Zeile 3 eingesetzt werden!
-        'kategory', //
+        'kOOL', //
         '',     // Position
         array(
+        	'Backend' => 'index', 
         ),
         array(
             'access' => 'user,group',
