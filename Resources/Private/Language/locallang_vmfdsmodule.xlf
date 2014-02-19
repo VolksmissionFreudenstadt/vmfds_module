@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-12-27T14:56:07Z" product-name="vmfds_module">
+		<header/>
+		<body>
+			
+            <trans-unit id="mlang_tabs_tab">
+				<source>Meine Kirche</source>
+			</trans-unit>
+			<trans-unit id="mlang_labels_tabdescr">
+				<source>Dienste der Volksmission Freudenstadt</source>
+			</trans-unit>
+			<trans-unit id="mlang_labels_tablabel">
+				<source>Meine Kirche</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

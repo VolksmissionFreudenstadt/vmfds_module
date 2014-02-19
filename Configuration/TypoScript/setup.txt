@@ -1,0 +1,11 @@
+# Module configuration
+module.tx_vmfdsmodule {
+	persistence {
+		storagePid = {$module.tx_vmfdsmodule.persistence.storagePid}
+	}
+	view {
+		templateRootPath = {$module.tx_vmfdsmodule.view.templateRootPath}
+		partialRootPath = {$module.tx_vmfdsmodule.view.partialRootPath}
+		layoutRootPath = {$module.tx_vmfdsmodule.view.layoutRootPath}
+	}
+}
