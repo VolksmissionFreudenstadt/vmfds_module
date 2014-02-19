@@ -32,7 +32,6 @@ if (TYPO3_MODE === 'BE') {
         'kategory', //
         '',     // Position
         array(
-            ....
         ),
         array(
             'access' => 'user,group',
