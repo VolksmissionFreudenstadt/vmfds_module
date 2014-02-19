@@ -37,25 +37,6 @@ if (TYPO3_MODE === 'BE') {
 			)
 	);
 	
-	
- 
-    /**
-     * Registers a BE submodule
-     */
-    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
-        'VMFDS.'.$_EXTKEY,
-        'VolksmissionModule',   //Hier muss der Name aus Zeile 3 eingesetzt werden!
-        'Kool', //
-        '',     // Position
-        array(
-        	'Backend' => 'index', 
-        ),
-        array(
-            'access' => 'user,group',
-            'icon'   => 'EXT:' . $_EXTKEY . '/ext_icon.gif',
-            'labels' => 'LLL:EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_mod_kool.xml',
-        )
-    );
 }
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Volksmissionsmodul');
 
